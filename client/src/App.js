@@ -82,7 +82,6 @@ class App extends Component {
               <Route exact path="/profile/:handle" component={Profile} />
               <Route exact component={NotFound} />
             </Switch>
-            <Footer />
           </div>
         </BrowserRouter>
       </Provider>
