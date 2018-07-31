@@ -42,7 +42,7 @@ class Dashboard extends Component {
             <div style={{ marginBottom: "60px" }} />
             <button
               onClick={this.onDeleteClick.bind(this)}
-              className="btn btn-danger"
+              className="btn btn-danger mb-5 mt-3"
             >
               Delete account
             </button>
@@ -61,7 +61,10 @@ class Dashboard extends Component {
       }
     }
     return (
-      <div className="dashboard">
+      <div
+        className="dashboard"
+        style={{ marginTop: "150px", minHeight: "100vh" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-12">

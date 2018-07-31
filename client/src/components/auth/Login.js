@@ -53,36 +53,41 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto formy">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">
-                Sign in to your DevConnector account
-              </p>
-              <form onSubmit={this.onSubmit}>
-                <TextFieldGroup
-                  placeholder="Email"
-                  name="email"
-                  type="email"
-                  value={this.state.email}
-                  onChange={this.onChange}
-                  error={errors.email}
-                />
-                <TextFieldGroup
-                  placeholder="Password"
-                  name="password"
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.onChange}
-                  error={errors.password}
-                />
-                <input type="submit" className="btn btn-info btn-block mt-4" />
-              </form>
-              <p className="text-center mt-2">
-                Don't have an account <Link to="/register">Sign up</Link> now
-              </p>
+      <div style={{ marginTop: "150px", minHeight: "100vh" }}>
+        <div className="login">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 m-auto formy">
+                <h1 className="display-4 text-center">Log In</h1>
+                <p className="lead text-center">
+                  Sign in to your Dev-Place account
+                </p>
+                <form onSubmit={this.onSubmit}>
+                  <TextFieldGroup
+                    placeholder="Email"
+                    name="email"
+                    type="email"
+                    value={this.state.email}
+                    onChange={this.onChange}
+                    error={errors.email}
+                  />
+                  <TextFieldGroup
+                    placeholder="Password"
+                    name="password"
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.onChange}
+                    error={errors.password}
+                  />
+                  <input
+                    type="submit"
+                    className="btn btn-info btn-block mt-4"
+                  />
+                </form>
+                <p className="text-center mt-2">
+                  Don't have an account <Link to="/register">Sign up</Link> now
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -102,4 +107,7 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { loginUser })(Login);
+export default connect(
+  mapStateToProps,
+  { loginUser }
+)(Login);

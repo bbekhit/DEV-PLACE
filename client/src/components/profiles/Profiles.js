@@ -24,10 +24,10 @@ class Profiles extends Component {
     }
     return (
       <div>
-        <div className="profiles">
+        <div className="profiles mt-5">
           <div className="container">
             <div className="row">
-              <div className="col-md-12 mx-auto">
+              <div className="col-md-12 mx-auto mt-5">
                 <h1 className="display-4 text-center">Developers' Profiles</h1>
                 <p className="lead text-center">
                   Browse and Connect with Developers

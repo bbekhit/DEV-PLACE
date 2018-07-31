@@ -81,8 +81,8 @@ class Register extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div>
-        <div className="register">
+      <div style={{ marginTop: "150px", minHeight: "100vh" }}>
+        <div className="register mt-5">
           <div className="container">
             <div className="row">
               <div className="col-md-8 mx-auto w-75 formy">
@@ -96,7 +96,11 @@ class Register extends Component {
                     upload avatar
                   </button>
                 </div>
-                {this.state.image && <p>Image uploaded successfuly</p>}
+                {this.state.image && (
+                  <alert className="alert-success alert-md p-1 m-5">
+                    Image uploaded successfuly{" "}
+                  </alert>
+                )}
 
                 <form noValidate onSubmit={this.onSubmit}>
                   <TextFieldGroup
